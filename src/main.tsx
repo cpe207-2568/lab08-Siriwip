@@ -1,10 +1,22 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './App.tsx'
-import 'bootstrap/dist/css/bootstrap.min.css';
+// "/libs/types.ts"
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+interface SidebarProps {
+  userName: string;
+  type?: "admin" |"student"
+}
+export type { SidebarProps };
+
+interface TaskCardProps {
+  id: number;
+  title: string;
+  description: string;
+  isDone: boolean;
+};
+export type { TaskCardProps };
+
+interface FooterProps  {
+  year: string;
+  fullName: string;
+  studentId: string | number;
+};
+export type { FooterProps  };
